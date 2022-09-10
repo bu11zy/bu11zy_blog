@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title%}
+    Редактировать статью!
+{% endblock %}
+
+{% block content %}
+
+    <h1>Изменить статью</h1>
+    <br/><br/>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-info">Опубликовать изменения</button>
+    </div>
+{% endblock %}
